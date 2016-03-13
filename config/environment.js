@@ -3,7 +3,13 @@
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'renegade-reporter-draft',
+    podModulePrefix: 'renegade-reporter-draft/features',
     environment: environment,
+    contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com" },
+    firebase: 'https://renegade-reporter.firebaseio.com/',
+    torii: {
+      sessionServiceName: 'session'
+    },
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
